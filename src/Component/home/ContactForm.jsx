@@ -16,10 +16,11 @@ const [massage, setMassage] = useState("");
   };
 
   return (
-    <div className="bg-[#FFD4D0]" id="contact">
+    <div className="bg-[#FFD4D0] relative" id="contact">
+      <div className="bg-red-500 sm:w-60 sm:h-60 rounded-full absolute mt-30 -ml-40 "></div>
       <div className="mx-auto p-6 rounded-xl flex flex-col md:flex-row gap-6 container py-10">
         <div className="flex items-center md:w-1/2">
-          <div className="space-y-4  ">
+          <div className="space-y-4 pl-8 ">
             <h2 className="text-2xl font-bold">Get in Touch</h2>
             <p className="text-gray-600">
               Have a question or a project in mind? I'd love to hear from you.
@@ -40,16 +41,16 @@ const [massage, setMassage] = useState("");
               1234 Design Street, Creativeville, Webland, Imaginary State, 98765
             </p>
             <div className="flex gap-4 items-center">
-              <div className="p-2 bg-white rounded-full  hover:bg-red-500 hover:text-white">
+              <div className="p-2 bg-white rounded-full  hover:bg-red-500 hover:text-white transition duration-150">
                 <FaFacebook />
               </div>
-              <div className="p-2 bg-white rounded-full  hover:bg-red-500 hover:text-white">
+              <div className="p-2 bg-white rounded-full  hover:bg-red-500 hover:text-white transition duration-150">
                 <FaInstagramSquare />
               </div>
-              <div className="p-2 bg-white rounded-full  hover:bg-red-500 hover:text-white">
+              <div className="p-2 bg-white rounded-full  hover:bg-red-500 hover:text-white transition duration-150">
                 <FaTwitter />
               </div>
-              <div className="p-2 bg-white rounded-full  hover:bg-red-500 hover:text-white">
+              <div className="p-2 bg-white rounded-full  hover:bg-red-500 hover:text-white transition duration-150">
                 <FaGithub />
               </div>
             </div>

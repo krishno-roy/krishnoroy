@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div className="bg-black min-h-65 space-y-4">
       <div className=" container mx-auto items-center pt-24 px-12">
-        <div className="flex justify-between items-center md:w-2xl mx-auto">
+        <div className="flex justify-between items-center md:w-2xl mx-auto  gap-7">
           <div>
             <ul className="flex gap-4 text-white text-center">
               <li>
@@ -19,10 +19,10 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <img src={LogoImage} alt="" />
+            <img src={LogoImage} alt="" className='size-8 bg-cover'/>
           </div>
           <div>
-            <ul className="flex gap-4 text-white flex-row">
+            <ul className="flex gap-6 text-white flex-row">
               <li>
                 <Link to={"/"}>About</Link>
               </li>

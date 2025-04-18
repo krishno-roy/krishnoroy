@@ -47,13 +47,13 @@ const Testimonial = () => {
   };
 
   return (
-    <div className="bg-red-100 py-16 px-6 text-center relative overflow-hidden">
+    <div className="bg-red-100 py-25 px-6 text-center relative overflow-hidden ">
       {/* Half-Shown Top Decorative Circle */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-red-500 w-20 h-10 rounded-b-full"></div>
 
       {/* Testimonial Content */}
       <h2 className="text-3xl font-bold mb-4">Testimonials</h2>
-      <p className="max-w-2xl mx-auto text-gray-700 mb-6 transition-all duration-500">
+      <p className="max-w-2xl mx-auto text-gray-700 mb-6 transition-all duration-50 py-12">
         {testimonials[currentIndex].text}
       </p>
 

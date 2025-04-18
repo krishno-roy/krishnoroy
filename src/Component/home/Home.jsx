@@ -8,6 +8,7 @@ import BlogSection from './Blog';
 import ContactForm from './ContactForm';
 import Footer from './Footer';
 import Skill from './Skill';
+import Pricing from './Pricing';
 
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
       <Service/>
       <Portfolio/>
       <Skill/>
+      <Pricing/>
       <Testimonial/>
       <BlogSection/>
       <ContactForm/>

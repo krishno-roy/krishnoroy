@@ -28,7 +28,7 @@ const About = () => {
             <p>Clients</p>
           </div>
         </div>
-        <div className="absolute -buttom-0 left-1/2 transform -translate-x-4 bg-red-500 w-40 h-20 rounded-b-full rotate-180"></div>
+        <div className="absolute -buttom-3 left-1/2 transform -translate-x-6 bg-red-500 w-40 h-20 rounded-b-full rotate-180"></div>
       </div>
     </div>
   );
