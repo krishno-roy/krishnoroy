@@ -22,7 +22,7 @@ const Hero = () => {
             </p>
             <div className="space-x-5">
               <button className="py-3 px-6 bg-black text-white text-xl font-bold">
-                <Link to="/">Hire Me</Link>
+                <Link to="https://www.fiverr.com/krisnh_o">Hire Me</Link>
               </button>
               <button className="py-3 px-6 border border-black text-xl">
                 <a href="#portfolio">Portfolio</a>

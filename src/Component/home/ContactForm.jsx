@@ -38,7 +38,7 @@ const [massage, setMassage] = useState("");
             </p>
             <p className="text-gray-700 flex gap-2 items-center">
               <FaMapMarkerAlt />
-              1234 Design Street, Creativeville, Webland, Imaginary State, 98765
+              Nilphamari, Textile Mills, Darowani
             </p>
             <div className="flex gap-4 items-center">
               <div className="p-2 bg-white rounded-full  hover:bg-red-500 hover:text-white transition duration-150">
