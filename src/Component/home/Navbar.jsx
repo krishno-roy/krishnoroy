@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className="bg-red-600 h-20 w-20 absolute md:ml-100 ml-60 rounded-full -mt-20"></div>
         {/* Logo */}
         <a href="/" className="text-2xl font-bold">
-          <img src={logoImage} alt="Logo" className="h-10 w-auto" />
+          <img src={logoImage} alt="Logo" className="h-12 w-auto" />
         </a>
 
         {/* Desktop Menu */}

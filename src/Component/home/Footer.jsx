@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
-import LogoImage from '../../assets/logo.png'
+import LogoImage from "../../assets/footer.png";
 import { FaFacebook, FaGithub, FaInstagramSquare, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {

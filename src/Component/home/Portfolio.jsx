@@ -11,44 +11,47 @@ const Portfolio = () => {
   const PortfolioList = [
     {
       id: 1,
-      label: "Educational Platform",
+      label: "Google Tag Manager",
       Image: Portfolio1,
-      Paragraph: "Web Design / Usability Testing",
+      Paragraph: "Google Tag manger Conversion tracking ",
       svg: <FaArrowRight className="text-white" />,
     },
     {
       id: 2,
-      label: "Travel App Design",
+      label: "Google Ads Conversion Tracking",
       Image: Portfolio2,
-      Paragraph: "UX Research / App Design ",
+      Paragraph: "Marketing",
       svg: <FaArrowRight className="text-white" />,
     },
     {
       id: 3,
-      label: "Personal Page",
+      label: "Conversion Tracking",
       Image: Portfolio3,
-      Paragraph: "Web Design",
+      Paragraph: "Stape | Server-Side Tracking Made Easy For Everyone",
       svg: <FaArrowRight className="text-white" />,
     },
     {
       id: 4,
-      label: "Furniture Mobile App",
+      label: "Google Analytics 4",
       Image: Portfolio4,
-      Paragraph: "App Design",
+      Paragraph:
+        "Event-based model: More flexible and detailed tracking than Universal Analytics.",
       svg: <FaArrowRight className="text-white" />,
     },
     {
       id: 5,
-      label: "Coffee House Landing Page",
+      label: "Google Analytics 4 Reporting",
       Image: Portfolio5,
-      Paragraph: "UX Research / Web Design",
+      Paragraph:
+        "GA4 offers customizable, real-time reports focused on user behavior, events, and conversions",
       svg: <FaArrowRight className="text-white" />,
     },
     {
       id: 6,
-      label: "Home Services Page",
+      label: "Cookie Consent Mode V2",
       Image: Portfolio6,
-      Paragraph: "Web Design / Marketing",
+      Paragraph:
+        "Cookie Consent Mode v2 is a privacy framework by Google that adjusts how your website collects and uses data based on a user’s consent choices.",
       svg: <FaArrowRight className="text-white" />,
     },
   ];

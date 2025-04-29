@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 ">
         <div className="flex items-center justify-center">
           <div className="space-y-4 text-center md:text-left sm:space-x-0">
-            <p>UX Designer</p>
+            <p>Web Analytics & Conversion Tracking Expart</p>
             <h1 className="text-[48px] font-bold">
               Hi There, I’m <br />
               <span className="text-red-500">Krishno Roy</span>

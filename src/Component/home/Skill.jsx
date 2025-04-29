@@ -6,12 +6,16 @@ const Skill = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-24">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-8">
-            Core Design Skills
+             Skills
           </h2>
           <p className="text-base sm:text-lg mb-10">
-            I excel in essential design skills, creating visually stunning and
-            functional digital experiences. From UI design to UX research, my
-            passion is to craft effective and memorable digital solutions.
+            We specialize in advanced implementation and management of Google
+            Tag Manager and Google Analytics 4, ensuring accurate and compliant
+            data collection. Our expertise extends to setting up effective
+            conversion tracking for both Google Ads and Facebook Ads, helping
+            you measure and optimize your campaigns. With strong proficiency in
+            Looker Studio and data visualization, we transform raw data into
+            clear, actionable insights that support smarter business decisions.
           </p>
         </div>
 
@@ -20,24 +24,36 @@ const Skill = () => {
           {/* Column 1 */}
           <div className="w-full md:w-1/2 space-y-6">
             <SkillBar
-              title="Interaction Design"
-              percent="90%"
+              title="Google Tag Manager"
+              percent="99%"
+              widthClass="w-12/12"
+            />
+            <SkillBar
+              title="Google Analytics 4"
+              percent="95%"
               widthClass="w-11/12"
             />
             <SkillBar
-              title="Usability Testing"
+              title="Google Ads Conversion Tracking"
               percent="80%"
               widthClass="w-10/12"
             />
-            <SkillBar title="User Research" percent="70%" widthClass="w-8/12" />
           </div>
 
           {/* Column 2 */}
           <div className="w-full md:w-1/2 space-y-6">
-            <SkillBar title="Figma" percent="80%" widthClass="w-10/12" />
-            <SkillBar title="Prototyping" percent="60%" widthClass="w-7/12" />
             <SkillBar
-              title="Information Architecture"
+              title="Facebook Ads Conversion "
+              percent="93%"
+              widthClass="w-11/12"
+            />
+            <SkillBar
+              title="Looker Studio"
+              percent="80%"
+              widthClass="w-10/12"
+            />
+            <SkillBar
+              title="Data Visualisation"
               percent="70%"
               widthClass="w-8/12"
             />
