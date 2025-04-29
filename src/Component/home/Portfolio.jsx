@@ -83,9 +83,14 @@ const Portfolio = () => {
               <h3 className="text-lg font-semibold">{portfolio.label}</h3>
               <div className="flex items-center justify-between">
                 <p className="text-gray-600">{portfolio.Paragraph}</p>
-                <div className="p-4 bg-red-600 text-white rounded-full -rotate-45">
+                <button
+                  onClick={() =>
+                    window.open("https://www.fiverr.com/krisnh_o")
+                  }
+                  className="p-4 bg-red-600 text-white rounded-full -rotate-45 cursor-pointer"
+                >
                   {portfolio.svg}
-                </div>
+                </button>
               </div>
             </div>
           ))}
