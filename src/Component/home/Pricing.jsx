@@ -2,88 +2,130 @@ import React, { useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 
 const Pricing = () => {
-  const [billingCycle, setBillingCycle] = useState("yearly"); // 'monthly' or 'yearly'
+  const [selectedCategory, setSelectedCategory] = useState("tracking");
 
   const pricingPlans = [
     {
-      name: "Basic",
-      description: "Perfect for individuals",
-      monthlyPrice: 0,
-      yearlyPrice: 0,
+      name: "Basic Tracking",
+      category: "tracking",
+      description: "Start with essential tracking setups for your business",
+      monthlyPrice: 30,
+      yearlyPrice: 300,
       features: [
-        "All features",
-        "Account Manager",
-        "Single Sign-On",
-        "Collaboration tools",
+        "Google Analytics 4 setup",
+        "Basic Google Ads tracking",
+        "Basic Meta Pixel setup",
       ],
     },
     {
-      name: "Pro",
-      description: "Best for professionals",
-      monthlyPrice: 15,
-      yearlyPrice: 12, // $12/month when billed yearly
+      name: "Premium Tracking",
+      category: "tracking",
+      description: "Enhanced tracking with event-based customization",
+      monthlyPrice: 70,
+      yearlyPrice: 600,
       features: [
-        "All Basic features",
-        "Advanced analytics",
-        "Priority support",
-        "API access",
+        "Full GA4 + GTM setup",
+        "Meta Pixel Conversion API",
+        "Enhanced GAds Conversion Tracking",
+        "Cookie Consent Banner Setup",
       ],
       featured: true,
     },
     {
-      name: "Enterprise",
-      description: "For large organizations",
-      monthlyPrice: 30,
-      yearlyPrice: 25, // $25/month when billed yearly
+      name: "Advanced Tracking",
+      category: "tracking",
+      description: "Complete tracking for enterprise-level insights",
+      monthlyPrice: 150,
+      yearlyPrice: 1200,
       features: [
-        "All Pro features",
-        "Dedicated account manager",
-        "Custom integrations",
-        "Enterprise-grade security",
+        "GA4 & GTM full service",
+        "Meta + Google Conversion APIs",
+        "Custom Events & Funnels",
+        "Cross-domain tracking",
+        "Consent Mode v2 Setup",
+      ],
+    },
+    {
+      name: "Google Ads",
+      category: "ads",
+      description: "Boost leads and sales with optimized Google Ads campaigns",
+      monthlyPrice: 200,
+      yearlyPrice: 1800,
+      features: [
+        "Keyword research & ad creation",
+        "Conversion tracking setup",
+        "Performance optimization",
+        "Weekly performance reports",
+      ],
+    },
+    {
+      name: "Facebook Ads",
+      category: "ads",
+      description: "Reach target audiences through Meta Ads effectively",
+      monthlyPrice: 180,
+      yearlyPrice: 1600,
+      features: [
+        "Audience research & creative setup",
+        "Pixel & Conversion API integration",
+        "Retargeting & Lookalike campaigns",
+        "Monthly strategy sessions",
+      ],
+      featured: true,
+    },
+    {
+      name: "TikTok Ads",
+      category: "ads",
+      description: "Drive engagement with viral TikTok ad strategies",
+      monthlyPrice: 150,
+      yearlyPrice: 1300,
+      features: [
+        "Video ad creation & management",
+        "Pixel setup & event tracking",
+        "Influencer strategy support",
+        "Ad performance analysis",
       ],
     },
   ];
 
-  const toggleBillingCycle = () => {
-    setBillingCycle((prev) => (prev === "yearly" ? "monthly" : "yearly"));
-  };
+  const filteredPlans = pricingPlans.filter(
+    (plan) => plan.category === selectedCategory
+  );
 
   return (
     <div className="px-4 py-10">
       <div className="max-w-4xl mx-auto text-center space-y-5">
         <h1 className="text-4xl md:text-5xl font-bold">
-          Choose Plan That's Right For You
+          Choose the Right Plan for Your Business
         </h1>
         <p className="text-lg md:text-xl">
-          Choose the plan that works best for you, feel free to contact us.
+          Select a category and explore the plans we offer.
         </p>
-        <div className="bg-white shadow-md py-2  px-4 rounded-lg flex justify-center space-x-5 items-center inline-block">
+        <div className="bg-white shadow-md py-2 px-4 rounded-lg flex justify-center space-x-5 items-center inline-block">
           <button
-            onClick={toggleBillingCycle}
-            className={`text-lg md:text-xl w-[140px] bg-gray-200 py-2 rounded-xl ${
-              billingCycle === "monthly"
+            onClick={() => setSelectedCategory("tracking")}
+            className={`text-lg md:text-xl w-[180px] bg-gray-200 py-2 rounded-xl ${
+              selectedCategory === "tracking"
                 ? "font-bold text-[#54BD95]"
                 : "text-gray-500"
             }`}
           >
-            Bill Monthly
+            Tracking Setup
           </button>
           <button
-            onClick={toggleBillingCycle}
-            className={`py-2 px-4 rounded-xl text-lg md:text-xl w-[140px] ${
-              billingCycle === "yearly"
+            onClick={() => setSelectedCategory("ads")}
+            className={`py-2 px-4 rounded-xl text-lg md:text-xl w-[160px] ${
+              selectedCategory === "ads"
                 ? "bg-[#54BD95] text-white font-bold"
                 : "bg-gray-200 text-gray-700"
             }`}
           >
-            Bill Yearly
+            Digital Ads
           </button>
         </div>
       </div>
 
-      {/* Pricing Table */}
       <div className="container mx-auto py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {pricingPlans.map((plan, index) => (
+        {filteredPlans.map((plan, index) => (
           <div
             key={index}
             className={`text-center p-6 shadow-lg rounded-xl transition-all duration-300 ${
@@ -97,18 +139,12 @@ const Pricing = () => {
               </p>
               <h2 className="text-4xl font-bold mt-4">
                 <span>$</span>
-                {billingCycle === "yearly"
-                  ? plan.yearlyPrice
-                  : plan.monthlyPrice}
-                {billingCycle === "yearly" && (
-                  <span className="text-lg font-normal">/mo</span>
-                )}
+                {selectedCategory === "ads"
+                  ? plan.monthlyPrice
+                  : plan.yearlyPrice}
+                <span className="text-lg font-normal">/single project</span>
               </h2>
-              {billingCycle === "yearly" && (
-                <p className="text-sm mt-1">
-                  {plan.yearlyPrice * 12} billed annually
-                </p>
-              )}
+             
             </div>
             <div
               className={`p-5 rounded-xl transition-all duration-300 ${

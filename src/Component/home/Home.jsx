@@ -4,11 +4,11 @@ import Service from "./Serviec";
 import About from './About'
 import Portfolio from './Portfolio';
 import Testimonial from './Testimonial';
-import BlogSection from './Blog';
 import ContactForm from './ContactForm';
 import Footer from './Footer';
 import Skill from './Skill';
 import Pricing from './Pricing';
+import BlogPage from './BlogPage';
 
 
 const Home = () => {
@@ -21,7 +21,7 @@ const Home = () => {
       <Skill/>
       <Pricing/>
       <Testimonial/>
-      <BlogSection/>
+      <BlogPage/>
       <ContactForm/>
       <Footer/>
     </div>
